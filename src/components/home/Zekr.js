@@ -11,7 +11,7 @@ function Zekr(props) {
   };
   return (
     <div className="zekr col-12 col-md-6 ">
-      <div className="content p-1 p-md-5 py-5 rounded-3 h-100 ">
+      <div className="content p-3 p-md-5 py-5 rounded-3 h-100 ">
         <div className="image pt-3">
           <img
             src={image}
@@ -25,7 +25,7 @@ function Zekr(props) {
 
           <span className="number">{counter}</span>
         </div>
-        <p className="pt-3 pb-1">{zekr}</p>
+        <p className="pt-3 pb-1 px-2">{zekr}</p>
 
         {description?( <p className="description p-3 rounded-2 mb-3">{description}</p>):null} 
         <span className="reference p-2 ">{reference}</span>

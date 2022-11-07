@@ -21,7 +21,7 @@ function Zekr(props) {
     <>
       {counter <= count - 1 ? (
         <div className={`zekr col-12 col-md-6 `} ref={ref}>
-          <div className="content p-1 p-md-5 py-5 rounded-3 h-100">
+          <div className="content p-3 p-md-5 py-5 rounded-3 h-100">
             <div className="image pt-3">
               <img
                 src={image}
@@ -33,10 +33,10 @@ function Zekr(props) {
 
               <span className="number">{counter}</span>
             </div>
-            <p className="pt-3 pb-1">{zekr}</p>
+            <p className="pt-3 pb-1 px-2">{zekr}</p>
 
             {description ? (
-              <p className="description  p-1 p-md-3 rounded-2 mb-5">{description}</p>
+              <p className="description  p-3 p-md-3 rounded-2 mb-5">{description}</p>
             ) : null}
             {reference ? <p className="reference p-1 ">{reference}</p> : null}
 
