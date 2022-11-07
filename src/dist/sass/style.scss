@@ -1,0 +1,753 @@
+// variablث
+$main-color: rgba(0, 139, 139, 1);
+$main-color-opacity: rgba(0, 139, 139, .7);
+$second-color: #e9ecef;
+
+// mixin
+@mixin transition {
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+
+@mixin background {
+    background-image: url('../images/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+//  start global style
+body,
+html {
+    scroll-behavior: smooth;
+    direction: rtl;
+    overflow-x: hidden;
+    font-family: global;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: main-font2;
+}
+
+button {
+    border: none;
+}
+
+// end global style
+
+// start hero section
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &::after {
+        content: "";
+        left: 0px;
+        bottom: 0px;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        background: rgba(1, 34, 34, 0.6);
+        width: inherit;
+        height: inherit;
+        z-index: 1;
+    }
+
+    .video {
+        width: inherit;
+        height: inherit;
+        object-fit: cover !important;
+    }
+
+    .welcom {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        height: inherit;
+
+        .content {
+            width: 70%;
+            background: $main-color-opacity;
+            font-size: 35px;
+            margin-top: 20px;
+
+            h1 {
+
+                color: white;
+                text-align: center;
+                font-family: main-font2;
+                font-weight: bold;
+                word-spacing: 4px;
+
+            }
+        }
+
+
+    }
+}
+
+// end hero section
+
+
+// start header
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: transparent;
+
+    .container {
+        .logo {
+            img {
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+            }
+        }
+
+        .menu {
+            width: 50px;
+            height: 50px;
+            background: $main-color-opacity;
+            border: 2px solid $main-color-opacity;
+            cursor: pointer;
+
+            &:hover {
+                background: $main-color;
+                box-shadow: 0px 0px 0px 1px 0px $main-color;
+            }
+
+            .bars {
+                color: $second-color;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.White {
+    background-color: $main-color;
+    box-shadow: 0px 0px 10px 0px $main-color;
+}
+
+// end header
+
+// start aside
+aside {
+    @include transition;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    width: 50%;
+    background-color: $main-color;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+    height: 100vh;
+
+    .head {
+        .logo {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .close {
+            .icon {
+                color: $second-color;
+                font-size: 30px;
+                cursor: pointer;
+                @include transition;
+
+                &:hover {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        ul {
+            padding-right: 0px !important;
+
+            li {
+                border-bottom: 1px solid $second-color;
+
+                .link {
+                    @include transition;
+                    color: $second-color;
+                    font-size: 30px;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: $second-color;
+            font-size: 20px;
+        }
+
+        .subscribe {
+            color: $main-color;
+            background-color: $second-color;
+            font-family: main-font2;
+            font-size: 20px;
+
+            &:hover {
+                box-shadow: 0px 0px 3px 0px $second-color;
+            }
+        }
+    }
+}
+
+.show {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+
+//end aside
+
+// start home page and azkar sapah and masaa page
+
+.home,
+.azkar,
+.details {
+    @include background;
+    color: $second-color;
+
+    h2 {
+        font-family: main-font2;
+        font-size: 35px;
+    }
+
+    .azkars {
+        .finsh {
+            color: $second-color;
+            font-size: 30px;
+
+            .back {
+                cursor: pointer;
+                background-color: $second-color;
+                color: $main-color;
+                padding: 5px;
+            }
+        }
+
+        .zekr {
+
+            .content {
+                color: $main-color;
+                background-color: $second-color;
+                position: relative;
+                font-family: global;
+                font-size: 22px;
+
+                .image {
+                    position: relative;
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    .count {
+                        position: absolute;
+                        top: calc(97% - 75px);
+                        right: calc(50% - 30px);
+                        background-color: transparent;
+                        width: 60px;
+                        height: 60px;
+                        cursor: pointer;
+                    }
+
+                    .reset {
+                        position: absolute;
+                        top: calc(80% - 60px);
+                        right: calc(44% - 42px);
+                        background-color: transparent;
+                        width: 26px;
+                        height: 26px;
+                        cursor: pointer;
+
+                    }
+
+                    .number {
+                        position: absolute;
+                        top: calc(45% - 53px);
+                        right: calc(45% - 50px);
+                        font-family: digital;
+                        font-size: 30px;
+                    }
+                }
+
+                .description {
+                    background-color: $main-color;
+                    color: $second-color;
+                }
+
+                .reference {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    background-color: $main-color;
+                    color: $second-color;
+                    font-size: 16px;
+                    border-top-right-radius: 5px;
+                }
+
+                .goal {
+                    position: absolute;
+                    bottom: 15px;
+                    right: calc(50% - 25px);
+                    background-color: $main-color;
+                    color: $second-color;
+                    width: 50px;
+                    height: 30px;
+                }
+
+            }
+        }
+    }
+}
+
+//end home page and azkar sapah and masaa page
+// start other azkars
+
+.other {
+    .azkars {
+        .zekr {
+            cursor: pointer;
+        }
+    }
+}
+
+// end other azkars
+
+// start details
+.details {
+    padding-bottom: 60px !important;
+
+    .container {
+        .zekr {
+            span {
+                font-family: main-font2;
+                color: #198754;
+                font-size: 30px;
+            }
+
+            background:$second-color;
+            font-size: 25px;
+            padding-right:10px;
+            border-right:10px solid $main-color;
+            color:$main-color;
+
+        }
+
+        button {
+
+            background: $second-color;
+            color: $main-color;
+            font-family: main-font2;
+            font-size: 30px;
+
+            &:hover {
+                box-shadow: 0px 0px 3px 0px $second-color;
+            }
+        }
+    }
+}
+
+//end details
+// start maspaha
+
+.maspaha {
+
+    @include background;
+    font-family: main-font2;
+    color: $second-color;
+
+    .box {
+        background-color: $second-color;
+
+        .image {
+            color: $main-color;
+            position: relative;
+
+            img {
+                width: 250px;
+                height: 250px
+            }
+
+            .count {
+                position: absolute;
+                bottom: calc(11%);
+                right: calc(50% - 37px);
+                background-color: transparent;
+                width: 74px;
+                height: 66px;
+                cursor: pointer;
+
+            }
+
+            .reset {
+                position: absolute;
+                top: calc(77% - 65px);
+                right: calc(50% - 77px);
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+
+
+            }
+
+            .number {
+                position: absolute;
+                top: calc(42% - 53px);
+                right: calc(50% - 80px);
+                font-family: digital;
+                font-size: 30px;
+            }
+        }
+
+        .zekr {
+            color: $main-color;
+            font-size: 25px;
+
+        }
+
+        .add {
+            height: 60px;
+            position: relative;
+
+            input,
+            button {
+
+                border: none;
+                outline: none;
+                padding: 7px;
+                box-shadow: none;
+                height: 100%;
+                border: 2px solid $main-color;
+                height: 60px !important;
+                color: $main-color;
+            }
+
+            button {
+                background-color: $main-color;
+                color: $second-color;
+                font-size: 25px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                border-radius: 0px 10px 10px 0px;
+                -webkit-border-radius: 0px 10px 10px 0px;
+                -moz-border-radius: 0px 10px 10px 0px;
+                -ms-border-radius: 0px 10px 10px 0px;
+                -o-border-radius: 0px 10px 10px 0px;
+            }
+
+            input {
+                font-size: 25px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 10px 0px 0px 10px;
+                -webkit-border-radius: 10px 0px 0px 10px;
+                -moz-border-radius: 10px 0px 0px 10px;
+                -ms-border-radius: 10px 0px 0px 10px;
+                -o-border-radius: 10px 0px 0px 10px;
+            }
+
+        }
+    }
+
+    .list-of-images {
+        position: absolute;
+        top: 170px;
+        left: 20px;
+
+        .icon {
+            cursor: pointer;
+            position: fixed;
+            top: 120px;
+            left: 20px;
+            color: $main-color;
+            background-color: $second-color;
+        }
+
+        .row {
+            @include transition;
+            height: 0px;
+            overflow: hidden;
+            width: 120px;
+            background-color: $main-color;
+            padding: 0px;
+
+            .img {
+                margin-top: 5px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .visible {
+            height: auto;
+            overflow: auto;
+            padding: unset;
+        }
+    }
+}
+
+// end maspaha
+// start quran
+.quran {
+
+    @include background;
+    color: $second-color;
+
+    .container {
+        h2 {
+            font-size: 30px;
+            font-family: main-font2;
+        }
+
+        .sorah {
+            .content {
+                background-color: $second-color;
+                color: $main-color;
+                font-size: 30px;
+
+                .icon {
+                    cursor: pointer;
+                }
+
+                .hidePlay {
+                    display: none;
+                }
+
+                .hidePause {
+                    display: none;
+                }
+            }
+
+        }
+
+        .audio {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            background-color: $second-color;
+
+            audio {
+                width: 100%;
+                user-select: none;
+            }
+        }
+    }
+}
+
+//end quran
+// start footer
+footer {
+    background-color: #0f2f4f;
+    color: $main-color;
+    font-size: 30px;
+    font-family: main-font2;
+}
+
+//end footer
+// start scroll-to-top
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    font-size: 50px;
+    color: $second-color;
+    background: $main-color;
+    cursor: pointer;
+
+}
+
+.hide {
+    display: none;
+}
+
+//end scroll-to-top
+// start register
+.register {
+    width: 100%;
+    height: 100vh;
+    background: $main-color;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    color: $main-color;
+
+    .container {
+        font-family: main-font2;
+        background-color: $second-color;
+
+        .group {
+            label {
+                font-size: 25px;
+            }
+
+            .input,
+            textarea,
+            input {
+                font-size: 18x;
+                border: none;
+                outline: none;
+                padding: 10px;
+                width: 100%;
+                background-color: white !important;
+                color: $main-color !important;
+            }
+
+            .validation-error {
+                color: red;
+            }
+        }
+
+        .submit {
+            background: $main-color;
+            color: $second-color;
+
+            &:hover {
+                box-shadow: 0px 0px 3px 0px $main-color;
+            }
+        }
+
+        .thanks {
+            font-size: 30px;
+        }
+
+        .return {
+            background: $main-color;
+            color: $main-color;
+            font-family: main-font2;
+            font-size: 20px;
+            color: $second-color;
+
+            &:hover {
+                box-shadow: 0px 0px 3px 0px $main-color;
+            }
+        }
+    }
+
+}
+
+// end register
+// start  whiting page
+.whiting {
+    background-image: url('../images/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $second-color;
+    height: calc(100vh - 200px);
+    width: 100%;
+
+    .spinnner {
+        font-size: 40px;
+        @include transition;
+        animation: rotat 1s linear infinite;
+        -webkit-animation: rotat 1s linear infinite;
+    }
+}
+
+// start animation 
+@keyframes rotat {
+    0% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+
+@media (max-width:576px) {
+    .hero .welcom .content {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .maspaha {
+        .box{  
+              width: 100% !important;
+            .add {
+                width: 100% !important;
+            }
+        }
+       
+    
+    }
+}
+
+// fonts 
+
+@font-face {
+    font-family: main-font2;
+    src: url(../fonts/main.ttf);
+}
+
+@font-face {
+    font-family: digital;
+    src: url(../fonts/digital-7.ttf);
+}
+
+@font-face {
+    font-family: global;
+    src: url(../fonts/global.ttf);
+}
