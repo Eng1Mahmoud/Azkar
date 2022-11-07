@@ -288,23 +288,25 @@ aside {
                         width: 60px;
                         height: 60px;
                         cursor: pointer;
+                    
                     }
 
                     .reset {
                         position: absolute;
-                        top: calc(80% - 60px);
-                        right: calc(44% - 42px);
+                        top: calc(80% - 59px);
+                        right: calc(50% - 63px);
                         background-color: transparent;
                         width: 26px;
                         height: 26px;
                         cursor: pointer;
+                      
 
                     }
 
                     .number {
                         position: absolute;
-                        top: calc(45% - 53px);
-                        right: calc(45% - 50px);
+                        top: calc(45% - 43px);
+                        right: calc(50% - 65px);
                         font-family: digital;
                         font-size: 30px;
                     }
@@ -327,12 +329,16 @@ aside {
 
                 .goal {
                     position: absolute;
-                    bottom: 15px;
+                    bottom: 7px;
                     right: calc(50% - 25px);
                     background-color: $main-color;
                     color: $second-color;
                     width: 50px;
                     height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
                 }
 
             }
