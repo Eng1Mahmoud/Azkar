@@ -2,7 +2,7 @@ import React, { useState, Suspense } from "react";
 import Navbar from "./components/Header";
 import Aside from "./components/Aside";
 import Footer from "./components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,HashRouter } from "react-router-dom";
 import { FaAngleUp } from "react-icons/fa";
 import Whiting from "./components/Whiting";
 import Register from "./components/regester/Register";
@@ -25,7 +25,7 @@ function App() {
     }
   });
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Navbar />
         <Aside />
@@ -103,7 +103,7 @@ function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

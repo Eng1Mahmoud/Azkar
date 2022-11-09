@@ -26,7 +26,7 @@ function Home() {
           <div className="row  g-5 text-center">
             {data.map((zekr) => {
               return (
-                <Suspense fallback={<Whiting />}>
+                <Suspense fallback={<Whiting />}  key={zekr.id} >
                   <Zekr zekr={zekr} key={zekr.id} />
                 </Suspense>
               );
