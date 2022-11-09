@@ -21,7 +21,7 @@ function Maspaha() {
   useEffect(() => {
     const res = async () => {
       await axios
-        .get("https://zekr1.herokuapp.com/images")
+        .get("https://azkary.glitch.me/images")
         .then((res) => {
           setData(res.data);
         })

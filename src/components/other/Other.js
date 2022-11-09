@@ -18,7 +18,7 @@ function Other() {
   useEffect(() => {
     const res = async () => {
       await axios
-        .get("https://zekr1.herokuapp.com/other")
+        .get("https://azkary.glitch.me/other")
         .then((res) => {
           setData(res.data);
         })

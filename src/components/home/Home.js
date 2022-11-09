@@ -8,7 +8,7 @@ function Home() {
   useEffect(() => {
     const res = async () => {
       await axios
-        .get("https://zekr1.herokuapp.com/home")
+        .get("https://azkary.glitch.me/home")
         .then((res) => {
           setData(res.data);
         })

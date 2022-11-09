@@ -23,7 +23,7 @@ const onSubmit = (values, onSubmitProps) => {
   onSubmitProps.setSubmitting(false);
   onSubmitProps.resetForm(true);
   axios
-    .post("https://zekr1.herokuapp.com/users", values)
+    .post("https://azkary.glitch.me/users", values)
     .then((res) => console.log("good"))
     .catch((err) => console.log(err));
 };

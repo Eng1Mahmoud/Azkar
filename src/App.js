@@ -44,7 +44,7 @@ function App() {
             element={
               <Suspense fallback={<Whiting />}>
                 <Azkar
-                  api="https://zekr1.herokuapp.com/azkar-spah"
+                  api="https://azkary.glitch.me/azkar-spah"
                   catigory="الصباح"
                 />
               </Suspense>
@@ -55,7 +55,7 @@ function App() {
             element={
               <Suspense fallback={<Whiting />}>
                 <Azkar
-                  api="https://zekr1.herokuapp.com/azkar-masaa"
+                  api="https://azkary.glitch.me/azkar-masaa"
                   catigory="المساء"
                 />
               </Suspense>
