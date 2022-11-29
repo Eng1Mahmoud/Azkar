@@ -7,7 +7,7 @@ function Maspaha() {
   let [data, setData] = useState([]);
   let [counter, setCounter] = useState(0);
   let [activeImage, setActiveImage] = useState(
-    "https://i.ibb.co/TwYjNMj/m7.png"
+    "https://i.postimg.cc/NLkYZQ5n/m7.png"
   );
   let [input, setInput] = useState("لا حول ولا قوة الا بالله ");
   console.log(input);
