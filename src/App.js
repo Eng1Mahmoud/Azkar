@@ -15,6 +15,29 @@ let DetailsOFZekr = React.lazy(() =>
 let Maspaha = React.lazy(() => import("./components/Maspaha"));
 let Quran = React.lazy(() => import("./components/quran/Quran"));
 function App() {
+  /* document.addEventListener('contextmenu', function(e) {
+    e.preventDefault()
+    
+  });
+
+  document.onkeydown = function(e) {
+    if(e.key === "F12") {
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.key === "I") {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.key === "C") {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.key === "J") {
+       return false;
+    }
+    if(e.ctrlKey && e.key === "u"){
+       return false
+    }
+  }
+  */
   let [hide, setHide] = useState("hide");
 
   window.addEventListener("scroll", () => {
